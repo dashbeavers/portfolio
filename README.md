@@ -1,175 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dash Beavers - Systems Engineer & Developer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-        }
-        
-        .container {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #2c5530;
-            padding-bottom: 1rem;
-        }
-        
-        h1 {
-            color: #2c5530;
-            margin-bottom: 0.5rem;
-        }
-        
-        h2 {
-            color: #555;
-            border-left: 4px solid #4a9d4e;
-            padding-left: 1rem;
-        }
-        
-        .project {
-            background-color: #f9f9f9;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 5px;
-            border-left: 4px solid #4a9d4e;
-        }
-        
-        .project h3 {
-            color: #2c5530;
-            margin-top: 0;
-        }
-        
-        .tech {
-            font-weight: bold;
-            color: #4a9d4e;
-        }
-        
-        .impact {
-            background-color: #e8f5e8;
-            padding: 0.5rem;
-            border-radius: 3px;
-            font-style: italic;
-            margin: 0.5rem 0;
-        }
-        
-        .contact a {
-            color: #4a9d4e;
-            text-decoration: none;
-        }
-        
-        .contact a:hover {
-            text-decoration: underline;
-        }
+# Dash Beavers - Portfolio Website
 
-        .fun-fact {
-            background-color: #f0f8f0;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-            border-left: 3px solid #4a9d4e;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Dash Beavers</h1>
-            <p>Systems Engineer | Climate Tech Developer | Machine Learning Engineer</p>
-            <p><em>Building actionable solutions to climate and urban resilience challenges</em></p>
-        </header>
-        
-        <section>
-            <h2>About Me</h2>
-            <p>I'm a systems engineer driven to develop actionable solutions to the climate crisis through code and data. 
-               My work sits at the intersection of complex policy frameworks and applied engineering, leveraging machine learning 
-               and large-scale data architecture to build more resilient environments.</p>
-            
-            <p>With a background spanning International Relations and Civil & Environmental Engineering at 
-               Stanford, I bridge the gap between global climate goals and tangible, technical implementation. I thrive in 
-               environments where the path forward has to be built from scratch.</p>
-        </section>
+Personal portfolio showcasing my projects in climate technology, machine learning, and systems engineering.
 
-        <section>
-            <h2>Featured Projects</h2>
-            
-            <div class="project">
-                <h3>🏗️ Automated Building Detection for Seismic Retrofitting</h3>
-                <p>Engineered an automated building detection pipeline using computer vision...</p>
-                <div class="impact">Impact: Reduced manual building surveys by 51.3%</div>
-                <p class="tech">Technologies: Python, Grounding DINO, PyTorch, Computer Vision, OpenCV</p>
-                <p><strong>🔗 <a href="https://github.com/dashbeavers/seismic-building-detection">View Code & Documentation</a></strong></p>
-            </div>
-            
-            <div class="project">
-                <h3>🏢 AI for Building Decarbonization Outreach</h3>
-                <p>Built an intelligent system that analyzes building energy data and generates personalized outreach emails for heat pump marketers, targeting properties most likely to benefit from electrification upgrades.</p>
-                <div class="impact">Impact: Streamlines clean energy marketing with data-driven targeting and automated outreach</div>
-                <p class="tech">Technologies: Python, Data Pipeline Design, Municipal API Integration, Text Generation</p>
-                <p><strong>🔗 <a href="https://github.com/dashbeavers/building-decarbonization-ai">View Code & Documentation</a></strong></p>
-            </div>
-        
-            <div class="project">
-                <h3>🌊 Ocean Energy Modeling System</h3>
-                <p>Developed computational models for ocean energy turbine optimization and performance prediction...</p>
-                <div class="impact">Impact: Advancing renewable energy technology for coastal communities</div>
-                <p class="tech">Technologies: Python, NumPy, SciPy, MATLAB, Fluid Dynamics Modeling</p>
-                <p><strong>📋 Code available upon request (ongoing research)</strong></p>
-            </div>
-            <div class="project">
-                <h3>⚡ Trillion-Record Energy Data Architecture</h3>
-                <p>Architected a data strategy for processing over one trillion records of California Energy Commission meter data 
-                   to equitably target decarbonization investments across communities.</p>
-                <div class="impact">Impact: Enabling data-driven climate investment decisions at unprecedented scale</div>
-                <p class="tech">Technologies: Python, pandas, Apache Spark, SQL, Big Data Architecture</p>
-            </div>
-            <div class="project">
-                <h3>🌍 Global Climate Impact Database</h3>
-                <p>Aggregated and unified qualitative data from 40 countries into a comprehensive database to quantify 
-                   the real-world impact of international climate advocacy and policy interventions.</p>
-                <div class="impact">Impact: Providing evidence base for global climate policy effectiveness</div>
-            </div>
-            
-            
-        </section>
-        
-        <section>
-            <h2>Technical Skills</h2>
-            <p><strong>Programming:</strong> Python, SQL, MATLAB, R, JavaScript, HTML/CSS</p>
-            <p><strong>Machine Learning:</strong> PyTorch, TensorFlow, scikit-learn, Computer Vision, NLP</p>
-            <p><strong>Data Engineering:</strong> pandas, NumPy, Big Data Architecture</p>
-            <p><strong>Specialized:</strong> Climate Data Analysis, Geospatial Analysis, Policy Modeling</p>
-        </section>
-        
-        <section>
-            <h2>Background</h2>
-            <p><strong>Education:</strong> MS Civil & Environmental Engineering, BA International Relations (Stanford University)</p>
-            <p><strong>Experience:</strong> Research in Washington D.C., Field deployment in Kenya, Energy policy research, Financial modeling</p>
-            <p><strong>Focus Areas:</strong> Climate resilience, renewable energy, urban systems, machine learning applications for environmental challenges</p>
-        </section>
-        
-        <section class="contact">
-            <h2>Let's Connect</h2>
-            <p>📧 Email: dashbeavers@gmail.com</p>
-            <p>🐙 GitHub: <a href="https://github.com/dashbeavers">github.com/dashbeavers</a></p>
-            <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/dashbeavers">linkedin.com/in/dashbeavers</a></p>
-        </section>
+## About This Repository
 
-        <div class="fun-fact">
-            <p><strong>I went to school in a tree house on a small Caribbean island! 🏝️</strong>
-        </div>
-    </div>
-</body>
-</html>
+This repository contains the source code for my personal portfolio website, hosted at [dashbeavers.github.io/portfolio](https://dashbeavers.github.io/portfolio).
+
+## Featured Projects
+
+- **[AI for Building Decarbonization](https://github.com/dashbeavers/building-decarbonization-ai)** - Intelligent pipeline for targeting building electrification
+- **[Seismic Building Detection](https://github.com/dashbeavers/seismic-building-detection)** - Computer vision system for earthquake retrofit prioritization
+- **Ocean Energy Modeling** - Computational models for marine renewable energy (code available upon request)
+
+## Local Development
+
+To run locally:
+1. Clone this repository
+2. Open `index.html` in your browser
+3. Or serve with: `python -m http.server 8000`
+
+## Contact
+
+- **Email**: dashbeavers@gmail.com
+- **LinkedIn**: [linkedin.com/in/dashbeavers](https://linkedin.com/in/dashbeavers)
+- **GitHub**: [github.com/dashbeavers](https://github.com/dashbeavers)
+
+---
+*Portfolio last updated: June 2026*
