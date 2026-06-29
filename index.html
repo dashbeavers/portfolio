@@ -3,198 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dash Beavers - Systems Engineer & Developer</title>
+    <title>Dash Beavers | Systems Engineer</title>
     <style>
+        /* ENTERPRISE AESTHETIC CSS
+           Minimalist, high-contrast, data-focused.
+        */
+        :root {
+            --bg-body: #f4f5f7;
+            --bg-container: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --text-light: #64748b;
+            --accent: #2563eb;
+            --border: #e2e8f0;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.7;
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: #333;
-            letter-spacing: 0.01em;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem 1rem;
+            -webkit-font-smoothing: antialiased;
         }
-        
+
         .container {
-            background-color: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-container);
+            padding: 4rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        
+
         header {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 2rem;
             margin-bottom: 3rem;
             padding-bottom: 2rem;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 2px solid var(--text-main);
         }
-        
+
         .profile-photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            border-radius: 4px; /* Sharper corners for a technical feel */
             object-fit: cover;
-            border: 4px solid #1e3a8a;
-            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
-            flex-shrink: 0;
+            border: 1px solid var(--border);
+            filter: grayscale(20%); /* Slightly mutes the image for professional tone */
         }
-        
+
         .header-text {
             flex: 1;
         }
-        
+
         h1 {
-            color: #1e293b;
-            margin: 0 0 0.5rem 0;
-            font-size: 2.5rem;
-            font-weight: 600;
+            margin: 0 0 0.25rem 0;
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
         }
-        
+
         .subtitle {
-            color: #475569;
             font-size: 1.1rem;
-            margin: 0.5rem 0;
             font-weight: 500;
+            color: var(--text-muted);
+            margin: 0 0 0.5rem 0;
         }
-        
-        .tagline {
-            color: #64748b;
-            font-style: italic;
-            margin: 0.5rem 0 0 0;
-            font-size: 1rem;
-        }
-        
-        h2 {
-            color: #1e293b;
-            border-left: 4px solid #1e3a8a;
-            padding-left: 1rem;
-            margin: 2.5rem 0 1.5rem 0;
-            font-weight: 600;
-        }
-        
-        .project {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            padding: 2rem;
-            margin: 1.5rem 0;
-            border-radius: 12px;
-            border-left: 4px solid #1e3a8a;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .project:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .project h3 {
-            color: #1e293b;
-            margin-top: 0;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-        
-        .tech {
-            font-weight: 600;
-            color: #1e3a8a;
-            background-color: #f1f5f9;
-            padding: 0.5rem;
-            border-radius: 6px;
-            margin: 1rem 0;
-            display: inline-block;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .impact {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            padding: 0.75rem;
-            border-radius: 8px;
-            font-style: italic;
-            margin: 1rem 0;
-            border-left: 3px solid #0369a1;
-            font-weight: 500;
-            color: #0c4a6e;
-        }
-        
-        .contact {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .contact a {
-            color: #1e3a8a;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s ease;
-        }
-        
-        .contact a:hover {
-            border-bottom-color: #1e3a8a;
-        }
-        
-        .fun-fact {
-            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-top: 2rem;
-            border-left: 4px solid #d97706;
-            text-align: center;
-            font-weight: 500;
-            color: #92400e;
-        }
-        
-        section p {
-            margin: 1rem 0;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        .contact-links {
+            display: flex;
             gap: 1rem;
-            margin: 1rem 0;
+            font-size: 0.9rem;
+            margin-top: 1rem;
         }
-        
-        .skill-category {
-            background-color: #f8fafc;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 3px solid #1e3a8a;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .project a {
-            color: #1e3a8a;
+
+        .contact-links a {
+            color: var(--accent);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
         }
-        
-        .project a:hover {
+
+        .contact-links a:hover {
             text-decoration: underline;
         }
-        
-        @media (max-width: 768px) {
+
+        h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin: 3rem 0 1.5rem 0;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 0.25rem 0;
+            color: var(--text-main);
+        }
+
+        p {
+            margin: 0 0 1rem 0;
+            color: var(--text-muted);
+        }
+
+        /* Project Section Styling */
+        .project {
+            margin-bottom: 2rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-links a {
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        ul.impact-list {
+            margin: 0.5rem 0 1rem 0;
+            padding-left: 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        ul.impact-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        .tech-stack {
+            font-size: 0.85rem;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            color: var(--text-light);
+            background: #f8fafc;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            display: inline-block;
+        }
+
+        /* Skills Grid */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 1rem 2rem;
+            font-size: 0.95rem;
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .skill-list {
+            color: var(--text-muted);
+        }
+
+        .fun-fact {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px dashed var(--border);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 2rem;
+            }
             header {
                 flex-direction: column;
-                text-align: center;
             }
-            
-            .profile-photo {
-                width: 120px;
-                height: 120px;
+            .skills-container {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
             }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .container {
-                padding: 1.5rem;
+            .skill-category {
+                margin-top: 0.5rem;
             }
         }
     </style>
@@ -205,100 +207,95 @@
             <img src="profile-photo.png" alt="Dash Beavers" class="profile-photo">
             <div class="header-text">
                 <h1>Dash Beavers</h1>
-                <p class="subtitle">Systems Engineer | Climate Tech Developer | Machine Learning Engineer</p>
-                <p class="tagline">Building actionable solutions to climate and urban resilience challenges</p>
+                <p class="subtitle">Systems Engineer & Machine Learning Developer</p>
+                <p>Stanford, CA</p>
+                <div class="contact-links">
+                    <a href="mailto:dashbeavers@gmail.com">dashbeavers@gmail.com</a>
+                    <a href="https://linkedin.com/in/dashbeavers" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/dashbeavers" target="_blank">GitHub</a>
+                </div>
             </div>
         </header>
         
         <section>
-            <h2>About Me</h2>
-            <p>I'm a systems engineer driven to develop actionable solutions to the climate crisis through code and data. 
-               My work sits at the intersection of complex policy frameworks and applied engineering, leveraging machine learning 
-               and large-scale data architecture to build more resilient environments.</p>
-            
-            <p>With a background spanning International Relations and Civil & Environmental Engineering at 
-               Stanford, I bridge the gap between global climate goals and tangible, technical implementation. I thrive in 
-               environments where the path forward has to be built from scratch.</p>
+            <h2>Summary</h2>
+            <p>Systems engineer specializing in energy infrastructure and complex systems, leveraging machine learning and large-scale data integration to translate global climate policy into deployed software solutions that optimize infrastructure and urban resilience.</p>
         </section>
 
         <section>
-            <h2>Featured Projects</h2>
+            <h2>Technical Experience & Applied Projects</h2>
             
             <div class="project">
-                <h3>🏗️ Automated Building Detection for Seismic Retrofitting</h3>
-                <p>Engineered an automated building detection pipeline using computer vision to streamline seismic safety assessments. This system identifies buildings requiring earthquake retrofitting from satellite and street-level imagery.</p>
-                <div class="impact">Impact: Reduced manual building surveys by 51.3%, accelerating urban resilience planning</div>
-                <p class="tech">Technologies: Python, Grounding DINO, PyTorch, Computer Vision, OpenCV</p>
-                <p><strong>🔗 <a href="https://github.com/dashbeavers/seismic-building-detection">View Code & Documentation</a></strong></p>
+                <div class="project-header">
+                    <h3>Vision-Based Seismic Retrofit Identification</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/dashbeavers/seismic-building-detection">Repository &nearr;</a>
+                    </div>
+                </div>
+                <p>ML pipeline to prioritize San Francisco buildings for seismic retrofitting via 8,000+ Google Street View scenes.</p>
+                <ul class="impact-list">
+                    <li>Developed an automated building detection pipeline using Grounding DINO and RoboFlow.</li>
+                    <li>Achieved 83.5% accuracy & 82.3% F1, outperforming vision-language models by ~14-17 pts.</li>
+                    <li>Reduced required manual building surveys by 51.3% while maintaining 82.7% recall.</li>
+                </ul>
+                <div class="tech-stack">PyTorch, Grounding DINO, Torchvision, OpenCV</div>
             </div>
             
             <div class="project">
-                <h3>🏢 AI for Building Decarbonization Outreach</h3>
-                <p>Built an intelligent system that analyzes building energy data and generates personalized outreach emails for heat pump marketers, targeting properties most likely to benefit from electrification upgrades.</p>
-                <div class="impact">Impact: Streamlines clean energy marketing with data-driven targeting and automated outreach</div>
-                <p class="tech">Technologies: Python, Data Pipeline Design, Municipal API Integration, Text Generation</p>
-                <p><strong>🔗 <a href="https://github.com/dashbeavers/building-decarbonization-ai">View Code & Documentation</a></strong></p>
-            </div>
-        
-            <div class="project">
-                <h3>🌊 Ocean Energy Modeling System</h3>
-                <p>Developed computational models for ocean energy turbine optimization and performance prediction, supporting the deployment of renewable energy infrastructure in marine environments.</p>
-                <div class="impact">Impact: Advancing renewable energy technology for coastal communities</div>
-                <p class="tech">Technologies: Python, NumPy, SciPy, MATLAB, Fluid Dynamics Modeling</p>
-                <p><strong>📋 Code available upon request (ongoing research)</strong></p>
-            </div>
-            
-            <div class="project">
-                <h3>🌍 Global Climate Impact Database</h3>
-                <p>Aggregated and unified qualitative data from 40 countries into a comprehensive database to quantify 
-                   the real-world impact of international climate advocacy and policy interventions.</p>
-                <div class="impact">Impact: Providing evidence base for global climate policy effectiveness</div>
-                <p class="tech">Technologies: Microsoft Excel, Statistical Analysis</p>
+                <div class="project-header">
+                    <h3>AI for Equitable Building Decarbonization</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/dashbeavers/building-decarbonization-ai">Repository &nearr;</a>
+                    </div>
+                </div>
+                <p>Co-authored ML proposal for CA Energy Commission to equitably target electrification investments.</p>
+                <ul class="impact-list">
+                    <li>Built a strategy to integrate NREL ResStock, CalEnviroScreen 4.0 equity data, and over 1 trillion CEC interval meter records.</li>
+                    <li>Architected 5-stage pilot framework; identified cap-and-trade & EPIC financing pathways.</li>
+                </ul>
+                <div class="tech-stack">Python, Big Data Architecture, Policy Modeling</div>
             </div>
 
             <div class="project">
-                <h3>⚡ Trillion-Record Energy Data Architecture</h3>
-                <p>Architected a data strategy for processing over one trillion records of California Energy Commission meter data 
-                   to equitably target decarbonization investments across communities.</p>
-                <div class="impact">Impact: Enabling data-driven climate investment decisions at unprecedented scale</div>
-            </div>
-            
-        </section>
-        
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <strong>Programming:</strong> Python, SQL, MATLAB, R, JavaScript, HTML/CSS
+                <div class="project-header">
+                    <h3>CARE ILO C190 Advocacy Initiative Database</h3>
                 </div>
-                <div class="skill-category">
-                    <strong>Machine Learning:</strong> PyTorch, TensorFlow, scikit-learn, Computer Vision, NLP
-                </div>
-                <div class="skill-category">
-                    <strong>Data Engineering:</strong> pandas, NumPy, Apache Spark, Big Data Architecture
-                </div>
-                <div class="skill-category">
-                    <strong>Specialized:</strong> Climate Data Analysis, Geospatial Analysis, Policy Modeling
-                </div>
+                <p>Aggregated and structured decentralized global field data into a unified, querying database to quantify the impact of international advocacy.</p>
+                <ul class="impact-list">
+                    <li>Designed localized data-reporting frameworks for Colombia and Ghana to track policy progression and influence.</li>
+                    <li>Synthesized qualitative field reports into quantitative metrics, analyzing cross-cultural statistical trends across 40 countries.</li>
+                    <li>Streamlined impact reporting by deploying scalable data frameworks, presenting actionable insights directly to CARE leadership.</li>
+                </ul>
+                <div class="tech-stack">SQL, Excel, Statistical Analysis</div>
             </div>
         </section>
         
         <section>
-            <h2>Background</h2>
-            <p><strong>Education:</strong> MS Civil & Environmental Engineering, BA International Relations (Stanford University)</p>
-            <p><strong>Experience:</strong> Research in Washington D.C., Field deployment in Kenya, Energy policy research, Financial modeling</p>
-            <p><strong>Focus Areas:</strong> Climate resilience, renewable energy, urban systems, machine learning applications for environmental challenges</p>
+            <h2>Skills & Technologies</h2>
+            <div class="skills-container">
+                <div class="skill-category">Languages</div>
+                <div class="skill-list">Python, SQL, R, JavaScript, HTML/CSS</div>
+                
+                <div class="skill-category">Machine Learning</div>
+                <div class="skill-list">PyTorch, Torchvision, OpenCV, Grounding DINO, Pandas</div>
+                
+                <div class="skill-category">Domain Expertise</div>
+                <div class="skill-list">Climate & Energy Policy, Urban Resilience, Seismic Engineering, Real Estate Development</div>
+            </div>
         </section>
         
-        <section class="contact">
-            <h2>Let's Connect</h2>
-            <p>📧 Email: <a href="mailto:dashbeavers@gmail.com">dashbeavers@gmail.com</a></p>
-            <p>🐙 GitHub: <a href="https://github.com/dashbeavers">github.com/dashbeavers</a></p>
-            <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/dashbeavers">linkedin.com/in/dashbeavers</a></p>
+        <section>
+            <h2>Education</h2>
+            <div class="skills-container">
+                <div class="skill-category">Stanford University</div>
+                <div class="skill-list">MS, Civil & Environmental Engineering (GPA: 4.02)</div>
+                <div class="skill-category">Stanford University</div>
+                <div class="skill-list">BA, International Relations - Energy & Economics (GPA: 3.89)</div>
+            </div>
         </section>
 
         <div class="fun-fact">
-            <p><strong>Fun fact: I went to school in a tree house on a small Caribbean island! 🏝️</strong></p>
+            Beyond the code: I went to school in a tree house on a small Caribbean island.
         </div>
     </div>
 </body>
