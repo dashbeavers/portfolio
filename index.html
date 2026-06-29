@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dash Beavers | Systems Engineer</title>
     <style>
-        /* ENTERPRISE AESTHETIC CSS
-           Minimalist, high-contrast, data-focused.
-        */
         :root {
-            --bg-body: #f4f5f7;
+            /* Deep grayish-navy background */
+            --bg-body: #475569; 
             --bg-container: #ffffff;
             --text-main: #0f172a;
             --text-muted: #475569;
@@ -24,22 +22,23 @@
             color: var(--text-main);
             line-height: 1.6;
             margin: 0;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background-color: var(--bg-container);
             padding: 4rem;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-radius: 6px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         }
 
         header {
             display: flex;
-            align-items: flex-start;
+            align-items: flex-end; /* Aligns the bottom of the photo with the bottom of the text */
+            justify-content: space-between;
             gap: 2rem;
             margin-bottom: 3rem;
             padding-bottom: 2rem;
@@ -47,38 +46,47 @@
         }
 
         .profile-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 4px; /* Sharper corners for a technical feel */
+            width: 160px;
+            height: 160px;
+            border-radius: 4px; 
             object-fit: cover;
             border: 1px solid var(--border);
-            filter: grayscale(20%); /* Slightly mutes the image for professional tone */
+            filter: grayscale(15%); 
         }
 
         .header-text {
             flex: 1;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
 
         h1 {
             margin: 0 0 0.25rem 0;
-            font-size: 2.25rem;
+            font-size: 2.5rem;
             font-weight: 700;
             letter-spacing: -0.02em;
             color: var(--text-main);
         }
 
         .subtitle {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 500;
             color: var(--text-muted);
-            margin: 0 0 0.5rem 0;
+            margin: 0 0 0.25rem 0;
+        }
+        
+        .location {
+            color: var(--text-muted);
+            margin: 0 0 1rem 0;
+            font-size: 0.95rem;
         }
 
         .contact-links {
             display: flex;
-            gap: 1rem;
-            font-size: 0.9rem;
-            margin-top: 1rem;
+            gap: 1.25rem;
+            font-size: 0.95rem;
         }
 
         .contact-links a {
@@ -113,9 +121,8 @@
             color: var(--text-muted);
         }
 
-        /* Project Section Styling */
         .project {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
 
         .project-header {
@@ -144,7 +151,7 @@
         }
 
         ul.impact-list li {
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.4rem;
         }
 
         .tech-stack {
@@ -152,16 +159,16 @@
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
             color: var(--text-light);
             background: #f8fafc;
-            padding: 0.25rem 0.5rem;
+            padding: 0.35rem 0.6rem;
             border-radius: 4px;
             border: 1px solid var(--border);
             display: inline-block;
+            margin-top: 0.5rem;
         }
 
-        /* Skills Grid */
         .skills-container {
             display: grid;
-            grid-template-columns: 150px 1fr;
+            grid-template-columns: 180px 1fr;
             gap: 1rem 2rem;
             font-size: 0.95rem;
         }
@@ -175,28 +182,36 @@
             color: var(--text-muted);
         }
 
-        .fun-fact {
+        .personal-section {
             margin-top: 4rem;
             padding-top: 2rem;
             border-top: 1px dashed var(--border);
-            font-size: 0.85rem;
-            color: var(--text-light);
-            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-muted);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             .container {
                 padding: 2rem;
             }
             header {
                 flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .header-text {
+                align-items: center;
+                text-align: center;
             }
             .skills-container {
                 grid-template-columns: 1fr;
                 gap: 0.25rem;
             }
             .skill-category {
-                margin-top: 0.5rem;
+                margin-top: 1rem;
+            }
+            .project-header {
+                flex-direction: column;
             }
         }
     </style>
@@ -208,7 +223,7 @@
             <div class="header-text">
                 <h1>Dash Beavers</h1>
                 <p class="subtitle">Systems Engineer & Machine Learning Developer</p>
-                <p>Stanford, CA</p>
+                <p class="location">Stanford, CA</p>
                 <div class="contact-links">
                     <a href="mailto:dashbeavers@gmail.com">dashbeavers@gmail.com</a>
                     <a href="https://linkedin.com/in/dashbeavers" target="_blank">LinkedIn</a>
@@ -219,7 +234,9 @@
         
         <section>
             <h2>Summary</h2>
-            <p>Systems engineer specializing in energy infrastructure and complex systems, leveraging machine learning and large-scale data integration to translate global climate policy into deployed software solutions that optimize infrastructure and urban resilience.</p>
+            <p>I am a systems engineer driven to develop actionable solutions to the climate and urban resilience crises. My work sits at the intersection of complex policy frameworks and applied engineering, aiming to bridge the gap between global goals and tangible, on-the-ground execution.</p>
+            
+            <p>After earning my undergraduate degree in International Relations with a focus on energy at Stanford, I realized that the traditional policy sector moved too slowly for the scale of the problem. Craving the fast-paced tempo of innovation, I pivoted toward a Master’s in Civil and Environmental Engineering to translate that macro-level perspective into technical reality. Today, I leverage machine learning and large-scale data architecture to build more resilient environments—doing my best work in environments where the path forward has to be built from scratch.</p>
         </section>
 
         <section>
@@ -232,11 +249,13 @@
                         <a href="https://github.com/dashbeavers/seismic-building-detection">Repository &nearr;</a>
                     </div>
                 </div>
-                <p>ML pipeline to prioritize San Francisco buildings for seismic retrofitting via 8,000+ Google Street View scenes.</p>
+                <p>Soft-story buildings are highly vulnerable to structural issues during earthquakes, often concentrating damage on the ground floor. To accelerate the identification of these at-risk structures, I developed a machine learning pipeline to prioritize San Francisco buildings for seismic retrofitting using Google Street View imagery, serving as a scalable screening tool to reduce manual urban inspections.</p>
                 <ul class="impact-list">
-                    <li>Developed an automated building detection pipeline using Grounding DINO and RoboFlow.</li>
-                    <li>Achieved 83.5% accuracy & 82.3% F1, outperforming vision-language models by ~14-17 pts.</li>
-                    <li>Reduced required manual building surveys by 51.3% while maintaining 82.7% recall.</li>
+                    <li>Engineered an automated building detection pipeline using Grounding DINO and RoboFlow.</li>
+                    <li>Developed a custom classifier using PyTorch to process DINO embeddings, streamlining the architecture for rapid, high-volume screening.</li>
+                    <li>Achieved 83.5% accuracy and 82.3% F1, outperforming vision-language models by ~14–17 points.</li>
+                    <li>Reduced the number of required manual urban inspections by 51.3% while maintaining an 82.7% recall rate for at-risk structures.</li>
+                    <li>Validated the model's adaptability by testing the pipeline against a dataset of residential houses in Los Angeles, proving broader scalability.</li>
                 </ul>
                 <div class="tech-stack">PyTorch, Grounding DINO, Torchvision, OpenCV</div>
             </div>
@@ -248,11 +267,7 @@
                         <a href="https://github.com/dashbeavers/building-decarbonization-ai">Repository &nearr;</a>
                     </div>
                 </div>
-                <p>Co-authored ML proposal for CA Energy Commission to equitably target electrification investments.</p>
-                <ul class="impact-list">
-                    <li>Built a strategy to integrate NREL ResStock, CalEnviroScreen 4.0 equity data, and over 1 trillion CEC interval meter records.</li>
-                    <li>Architected 5-stage pilot framework; identified cap-and-trade & EPIC financing pathways.</li>
-                </ul>
+                <p>Architected a data strategy for processing over one trillion records of California Energy Commission meter data to equitably target decarbonization investments across communities. Built a framework to integrate NREL ResStock and CalEnviroScreen 4.0 equity data to guide cap-and-trade financing pathways.</p>
                 <div class="tech-stack">Python, Big Data Architecture, Policy Modeling</div>
             </div>
 
@@ -260,11 +275,11 @@
                 <div class="project-header">
                     <h3>CARE ILO C190 Advocacy Initiative Database</h3>
                 </div>
-                <p>Aggregated and structured decentralized global field data into a unified, querying database to quantify the impact of international advocacy.</p>
+                <p>Partnering with CARE to accelerate the global ratification of ILO Convention 190 (a treaty aimed at eliminating workplace violence), I spearheaded independent research and aggregated decentralized field data into a unified database to quantify the macro-level impact of advocacy efforts across 40 countries.</p>
                 <ul class="impact-list">
-                    <li>Designed localized data-reporting frameworks for Colombia and Ghana to track policy progression and influence.</li>
-                    <li>Synthesized qualitative field reports into quantitative metrics, analyzing cross-cultural statistical trends across 40 countries.</li>
-                    <li>Streamlined impact reporting by deploying scalable data frameworks, presenting actionable insights directly to CARE leadership.</li>
+                    <li>Researched socio-political landscapes to design localized Mini Advocacy and Influencing Impact Reporting (AIIR) tools tailored for Colombia and Ghana.</li>
+                    <li>Synthesized qualitative field reports into quantitative metrics, utilizing Excel to visualize trend data, quantify impacted populations, and measure campaign success.</li>
+                    <li>Streamlined impact reporting by deploying scalable data frameworks, presenting cross-cultural statistical trends directly to CARE stakeholders to evaluate the efficacy of gender equality interventions.</li>
                 </ul>
                 <div class="tech-stack">SQL, Excel, Statistical Analysis</div>
             </div>
@@ -294,8 +309,8 @@
             </div>
         </section>
 
-        <div class="fun-fact">
-            Beyond the code: I went to school in a tree house on a small Caribbean island.
+        <div class="personal-section">
+            <strong>Beyond the code:</strong> When I am not working on the newest renewable technology or actively exploring the outdoors—whether I'm skydiving, skiing, or surfing—I often find myself watching the New York Giants. The recent lack of success from my beloved football team has helped shape a strong passion for the gym. I also enjoy playing with my four-pound dog, Snoop Dawg. And when Snoopy is all tired out, I love entering the fictional worlds of Game of Thrones or Harry Potter... there is something far more entertaining about wizards and dragons than the punts and turnovers I have grown accustomed to from the Giants.
         </div>
     </div>
 </body>
