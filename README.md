@@ -9,7 +9,7 @@ This repository contains the source code for my personal portfolio website, host
 ## Featured Projects
 
 - **[AI for Building Decarbonization](https://github.com/dashbeavers/building-decarbonization-ai)** - Intelligent pipeline for targeting building electrification
-- **[Seismic Building Detection](https://github.com/varunsahay19/CEE-247C-Soft-Story-Identification-Course-Project-Work.git)** - Computer vision system for earthquake retrofit prioritization
+- **[Seismic Building Detection](https://github.com/dashbeavers/CEE-247C-Soft-Story-Identification-Course-Project-Work.git)** - Computer vision system for earthquake retrofit prioritization
 - **Ocean Energy Modeling** - Computational models for marine renewable energy (code available upon request)
 
 ## Local Development
