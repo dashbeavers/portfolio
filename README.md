@@ -23,7 +23,7 @@ To run locally:
 
 - **Email**: dashbeavers@gmail.com
 - **LinkedIn**: [linkedin.com/in/dashbeavers](https://linkedin.com/in/dashbeavers)
-- **GitHub**: [github.com/dashbeavers](https://github.com/dashbeavers)
+- **GitHub**: [github.com/dashbeavers](https://github.com/dashbeavers/portfolio)
 
 ---
 *Portfolio last updated: June 2026*
